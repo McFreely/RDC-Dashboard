@@ -1,2 +1,12 @@
 div#welcome
-	h1 Dashboard
+	a href='/manage'
+		h1 Dashboard
+
+div#query
+	form action='/query/new' method='POST' id='query'
+		input type='text' name='query[title]' placeholder='query for a movie' id='title'
+		input type='submit' name='submit' id='submit'
+
+div#message
+	- unless @title.nil?
+		p = @sentence

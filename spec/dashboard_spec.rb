@@ -18,15 +18,6 @@ describe 'Dashboard' do
 		last_response.should be_redirect; follow_redirect!
 		last_request.url.should include('/manage')
 	end
-
-	it "should have a welcome div" do
-		get '/manage'
-		last_response.should be_ok
-		last_response.should have_selector('div#welcome') do |div|
-			div.should contain('Dashboard')
-		end
-
-	end
 end
 
 
@@ -49,5 +40,35 @@ describe 'views/layout.slim' do
 
 	it "should have a page title" do
 	    last_response.should have_selector('title', :content =>'Republique Democratique du Cinema')
+	end
+end
+
+describe 'views/manage.slim' do
+	it "should have a div#welcome, with a link" do
+		get '/manage'
+		last_response.should have_selector('div#welcome') do |div|
+			div.should contain('Dashboard')
+			div.should have_selector('a')
+		end
+	end
+
+  	it "should have a div#query" do
+  	  	get '/manage'
+  	  	last_response.should have_selector('div#query')
+  	end
+
+  	it "should have an input form for querying twiter" do
+	  	get '/manage'
+	  	last_response.should have_selector('form#query')
+	  	last_response.should have_selector('input#title')
+	  	last_response.should have_selector('input#submit')
+	end
+end
+
+describe '/query' do
+	it "should post " do
+		title = "kill bill"
+		post '/query/new', {:query => {:title => title}}
+		last_response.should be_ok
 	end
 end
