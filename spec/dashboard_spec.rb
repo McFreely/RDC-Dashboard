@@ -60,14 +60,14 @@ describe 'views/manage.slim' do
   	it "should have an input form for querying twiter" do
 	  	get '/manage'
 	  	last_response.should have_selector('form#query')
-	  	last_response.should have_selector('input#title')
+	  	last_response.should have_selector('input#title_input')
 	  	last_response.should have_selector('input#submit')
 	end
 end
 
 describe '/query' do
 	it "should post " do
-		title = "kill bill"
+		title = "Kill Bill"
 		post '/query/new', {:query => {:title => title}}
 		last_response.should be_ok
 	end
