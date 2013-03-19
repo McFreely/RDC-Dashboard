@@ -1,0 +1,41 @@
+a#welcome {
+  float: left;
+  clear: both;
+  text-decoration: none;
+  color: white; }
+  a#welcome div#welcome {
+    background: #6578d6; }
+    a#welcome div#welcome h1 {
+      position: absolute;
+      top: 100px;
+      left: 160px;
+      padding: 0;
+      margin: 0; }
+
+div#query {
+  background: #6578d6;
+  float: left;
+  text-align: center; }
+  div#query input#title_input {
+    width: 200px;
+    height: 25px;
+    border: none;
+    position: relative;
+    top: 35px;
+    right: 0; }
+  div#query input[type="submit"] {
+    position: relative;
+    top: 45px;
+    border: none;
+    background-color: #8e9ce1;
+    color: white;
+    padding: 7px; }
+  div#query input[type="submit"]:hover {
+    background-color: #aeb8ea; }
+
+div {
+  width: 300px;
+  height: 125px;
+  padding: 5px 10px 5px 10px;
+  margin-bottom: 10px;
+  margin-right: 10px; }

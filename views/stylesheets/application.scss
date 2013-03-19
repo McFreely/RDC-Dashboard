@@ -1,0 +1,65 @@
+// /* Welcome to Compass.
+//  * In this file you should write your main styles. (or centralize your imports)
+//  * Import this file using the following HTML or equivalent:
+//  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+$white: white;
+$lavand: #6578d6;
+$lavand-light: #8E9CE1;
+$lavand-lightest: #AEB8EA;
+$lavand-dark: #4E63D0;
+
+a#welcome {
+	float: left;
+	clear: both;
+	text-decoration: none;
+	color: white;
+
+	div#welcome {
+		background: $lavand;
+
+		h1 {
+			position: absolute;
+			top: 100px;
+			left:160px;
+			padding: 0;
+			margin: 0;
+		}
+	}
+}
+div#query {
+	background: $lavand;
+	float: left;
+	text-align: center;
+
+	input#title_input {
+		width: 200px;
+		height: 25px;
+		border: none;
+		position: relative;
+		top: 35px;
+		right: 0;
+	}
+
+	input[type="submit"] {
+		position: relative;
+		top: 45px;
+		border: none;
+		background-color: $lavand-light;
+		color: $white;
+		padding: 7px;
+	}
+
+	input[type="submit"]:hover {
+		background-color: $lavand-lightest;
+	}
+}
+
+
+div {
+	width: 300px;
+	height: 125px;
+	padding: 5px 10px 5px 10px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+}

@@ -44,11 +44,11 @@ describe 'views/layout.slim' do
 end
 
 describe 'views/manage.slim' do
-	it "should have a div#welcome, with a link" do
+	it "should have a div#welcome, linkable" do
 		get '/manage'
-		last_response.should have_selector('div#welcome') do |div|
-			div.should contain('Dashboard')
-			div.should have_selector('a')
+		last_response.should have_selector('a') do |a|
+			a.should contain('Dashboard')
+			a.should have_selector('div')
 		end
 	end
 
@@ -70,5 +70,6 @@ describe '/query' do
 		title = "Kill Bill"
 		post '/query/new', {:query => {:title => title}}
 		last_response.should be_ok
+		## Takes way too long each time with autotest, find a solution
 	end
 end

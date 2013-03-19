@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'sinatra'
 require 'slim'
+# require 'sass'
 require 'multi_json'
 require 'httparty'
 
@@ -49,8 +50,6 @@ post '/query/new' do
 	end
 	slim :manage
 end
-
-
 
 
 
