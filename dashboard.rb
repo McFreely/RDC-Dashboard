@@ -1,7 +1,6 @@
 require 'rubygems'
 require 'sinatra'
 require 'slim'
-# require 'sass'
 require 'multi_json'
 require 'httparty'
 
@@ -19,7 +18,7 @@ class Twitter
 		   			-'aller voir'
 		   			-RT"
 
-		@options = {:query => {:q => query + filters, :rpp => 100,
+		@options = {:query => {:q => query + filters, :rpp => 10,
 					   :page => page,
 					   :lang => :fr,
 					   :result_type => :recent}}
@@ -41,12 +40,11 @@ post '/query/new' do
 	@tweet_list = []
 	@page = 1
 	twitter = Twitter.new
-	while @page  <= 15
-		response = twitter.search(@title, @page)
+	while @page  <= 1
+		response = twitter.search(@title, 1)
 		response.each do |tweet|
 			@tweet_list <<  tweet['text']
 		end
-		@page += 1
 	end
 	slim :manage
 end

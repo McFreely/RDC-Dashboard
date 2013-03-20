@@ -65,11 +65,11 @@ describe 'views/manage.slim' do
 	end
 end
 
-describe '/query' do
-	it "should post " do
-		title = "Kill Bill"
-		post '/query/new', {:query => {:title => title}}
-		last_response.should be_ok
-		## Takes way too long each time with autotest, find a solution
-	end
-end
+# describe '/query' do
+# 	it "should post " do
+# 		# title = "Kill Bill"
+# 		# post '/query/new', {:query => {:title => title}}
+# 		# last_response.should be_ok
+# 		# ==> Takes way too long each time with autotest, find a solution
+# 	end
+# end
