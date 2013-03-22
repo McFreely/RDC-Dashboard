@@ -1,3 +1,16 @@
+body {
+  background-color: black; }
+
+div {
+  width: 400px;
+  height: 175px;
+  padding: 5px 10px 5px 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  background-color: #6578d6;
+  float: left;
+  color: white; }
+
 a#welcome {
   float: left;
   text-decoration: none; }
@@ -27,12 +40,5 @@ div#query {
   div#query input[type="submit"]:hover {
     background-color: #aeb8ea; }
 
-div {
-  width: 400px;
-  height: 175px;
-  padding: 5px 10px 5px 10px;
-  margin-bottom: 10px;
-  margin-right: 10px;
-  background-color: #6578d6;
-  float: left;
-  color: white; }
+div#message {
+  height: auto; }

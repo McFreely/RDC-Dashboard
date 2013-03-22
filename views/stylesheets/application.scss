@@ -4,10 +4,26 @@
 //  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 $text: white;
+$body: black;
 $lavand: #6578d6;
 $lavand-light: #8E9CE1;
 $lavand-lightest: #AEB8EA;
 $lavand-dark: #4E63D0;
+
+body {
+	background-color: $body;
+}
+
+div {
+	width: 400px;
+	height: 175px;
+	padding: 5px 10px 5px 10px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	background-color: $lavand;
+	float: left;
+	color: $text;
+}
 
 a#welcome {
 	float: left;
@@ -50,14 +66,6 @@ div#query {
 	}
 }
 
-
-div {
-	width: 400px;
-	height: 175px;
-	padding: 5px 10px 5px 10px;
-	margin-bottom: 10px;
-	margin-right: 10px;
-	background-color: $lavand;
-	float: left;
-	color: $text;
+div#message {
+	height: auto;
 }

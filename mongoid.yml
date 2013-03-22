@@ -1,7 +1,6 @@
 development:
-	host: localhost
-	database: movie_db_dev
-
-test:
-	host: localhost
-	database: movie_db_test
+  sessions:
+    default:
+      database: MovieList
+      hosts:
+        - localhost
