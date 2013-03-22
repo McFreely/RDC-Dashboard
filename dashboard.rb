@@ -43,7 +43,6 @@ get '/' do
 end
 
 get '/manage' do
-	# @titles = Movie.find()
 	@movie = Movie.all
 	slim :manage
 end
