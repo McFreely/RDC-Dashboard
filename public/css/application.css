@@ -65,7 +65,9 @@ div#results {
 
 div#database input[type="submit"] {
   border: none;
-  background-color: red;
+  background-color: #b66262;
   color: #f0f0f0;
   padding: 7px;
   margin-left: 10px; }
+div#database input[type="submit"]:hover {
+  background-color: #cf5b5b; }

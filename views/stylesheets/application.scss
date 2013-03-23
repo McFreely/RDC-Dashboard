@@ -10,6 +10,8 @@ $lavand-light: #8E9CE1;
 $lavand-lightest: #AEB8EA;
 $lavand-dark: #4E63D0;
 $grey-light: #F0F0F0;
+$warning: #B66262;
+$warning-light: #cf5b5b;
 
 body {
 	background-color: $body;
@@ -95,9 +97,13 @@ div#results {
 div#database {
 	input[type="submit"] {
 		border: none;
-		background-color: red;
+		background-color: $warning;
 		color: $grey-light;
 		padding: 7px;
 		margin-left: 10px;
 		}
+
+	input[type="submit"]:hover {
+		background-color: $warning-light;
+	}
 }

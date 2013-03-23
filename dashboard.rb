@@ -68,6 +68,14 @@ post '/query/new' do
 	slim :manage
 end
 
+get '/delete/all' do
+	db = Movie.all
+	if db.delete
+		redirect '/manage'
+	else
+		"Error delete all the movies"
+	end
+end
 
 
 
