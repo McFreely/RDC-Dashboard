@@ -3,14 +3,19 @@ a href='/manage' id='welcome'
 		h1 RDC - Dashboard
 
 div#query
+	h2 Add a movie
 	form action='/query/new' method='POST' id='query'
 		input type='text' name='query[title]' placeholder='query for a movie' id='title_input'
 		br
-		input type='submit' name='submit' id='submit'
+		input type='submit' value='Submit' id='submit'
 
-div#message
+div#results
 	h2 Search Results
-    -for movie in @movie
-    	ul
-    		li.title = movie.mt
-    		li.tweets = movie.tweets.count
+	ul
+	    -for movie in @movie
+	    	li = movie.mt + " \-\> " + movie.tweets.count.to_s
+
+Div#database
+	h2 Administration
+	form action='/' method='POST'
+		input type='submit' value='Clear Database'

@@ -1,44 +1,71 @@
 body {
-  background-color: black; }
+  background-color: #8f99a1; }
 
 div {
+  float: left;
   width: 400px;
   height: 175px;
-  padding: 5px 10px 5px 10px;
-  margin-bottom: 10px;
-  margin-right: 10px;
-  background-color: #6578d6;
-  float: left;
-  color: white; }
+  margin: 0 10px 10px 0;
+  background-color: #f0f0f0;
+  color: #484f55;
+  border-radius: 4px;
+  box-shadow: 0px 2px 5px 0px #777f85;
+  border: 1px solid #8e9ce1; }
+  div h2 {
+    background-color: #6578d6;
+    color: #f0f0f0;
+    padding: 10px;
+    margin: 0;
+    margin-bottom: 10px;
+    border-radius: 4px 4px 0 0; }
 
 a#welcome {
   float: left;
   text-decoration: none; }
-  a#welcome div#welcome h1 {
-    position: absolute;
-    top: 150px;
-    left: 165px;
-    padding: 0;
-    margin: 0; }
+  a#welcome div#welcome {
+    background-color: #6578d6; }
+    a#welcome div#welcome h1 {
+      color: #f0f0f0;
+      position: absolute;
+      top: 140px;
+      left: 145px;
+      padding: 0;
+      margin: 0; }
 
 div#query {
   text-align: center; }
   div#query input#title_input {
     width: 200px;
     height: 25px;
-    border: none;
+    border: 1px solid #aeb9c2;
+    border-radius: 2px;
+    padding: 5px;
     position: relative;
-    top: 65px;
+    top: 20px;
     right: 0; }
   div#query input[type="submit"] {
     position: relative;
-    top: 75px;
+    top: 30px;
     border: none;
     background-color: #8e9ce1;
-    color: white;
+    color: #f0f0f0;
     padding: 7px; }
   div#query input[type="submit"]:hover {
     background-color: #aeb8ea; }
 
-div#message {
+div#results {
   height: auto; }
+  div#results ul {
+    color: #484f55;
+    list-style: none;
+    margin: 0;
+    padding: 0 0 10px 20px; }
+    div#results ul li {
+      padding: 5px 0; }
+
+div#database input[type="submit"] {
+  border: none;
+  background-color: red;
+  color: #f0f0f0;
+  padding: 7px;
+  margin-left: 10px; }

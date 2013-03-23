@@ -3,26 +3,35 @@
 //  * Import this file using the following HTML or equivalent:
 //  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-$text: white;
-$body: black;
+$text: #484F55;
+$body: #8f99a1;
 $lavand: #6578d6;
 $lavand-light: #8E9CE1;
 $lavand-lightest: #AEB8EA;
 $lavand-dark: #4E63D0;
+$grey-light: #F0F0F0;
 
 body {
 	background-color: $body;
 }
 
 div {
-	width: 400px;
-	height: 175px;
-	padding: 5px 10px 5px 10px;
-	margin-bottom: 10px;
-	margin-right: 10px;
-	background-color: $lavand;
 	float: left;
+	width: 400px; height: 175px;
+	margin: 0 10px 10px 0;
+	background-color: $grey-light;
 	color: $text;
+	border-radius: 4px;
+	box-shadow: 0px 2px 5px 0px #777f85;
+	border: 1px solid $lavand-light;
+
+	h2 {
+		background-color: $lavand;
+		color: $grey-light;
+		padding: 10px;
+		margin: 0; margin-bottom: 10px;
+		border-radius: 4px 4px 0 0;
+	}
 }
 
 a#welcome {
@@ -30,11 +39,12 @@ a#welcome {
 	text-decoration: none;
 
 	div#welcome {
-
+		background-color: $lavand;
 		h1 {
+			color: $grey-light;
 			position: absolute;
-			top: 150px;
-			left: 165px;
+			top: 140px;
+			left: 145px;
 			padding: 0;
 			margin: 0;
 		}
@@ -46,18 +56,20 @@ div#query {
 	input#title_input {
 		width: 200px;
 		height: 25px;
-		border: none;
+		border: 1px solid #aeb9c2;
+		border-radius: 2px;
+		padding: 5px;
 		position: relative;
-		top: 65px;
+		top: 20px;
 		right: 0;
 	}
 
 	input[type="submit"] {
 		position: relative;
-		top: 75px;
+		top: 30px;
 		border: none;
 		background-color: $lavand-light;
-		color: $text;
+		color: $grey-light;
 		padding: 7px;
 	}
 
@@ -66,6 +78,26 @@ div#query {
 	}
 }
 
-div#message {
+div#results {
 	height: auto;
+	ul {
+		color: $text;
+		list-style: none;
+		margin: 0;
+		padding:0 0 10px 20px;
+
+		li {
+			padding: 5px 0;
+		}
+	}
+}
+
+div#database {
+	input[type="submit"] {
+		border: none;
+		background-color: red;
+		color: $grey-light;
+		padding: 7px;
+		margin-left: 10px;
+		}
 }
