@@ -4,14 +4,14 @@
 //  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 $text: #484F55;
-$body: #8f99a1;
-$lavand: #6578d6;
+$body: #303a4a;
+$lavand: #8f96b9;
 $lavand-light: #8E9CE1;
 $lavand-lightest: #AEB8EA;
 $lavand-dark: #4E63D0;
 $grey-light: #F0F0F0;
-$warning: #B66262;
-$warning-light: #cf5b5b;
+$warning: #ad434d;
+$warning-light: #d8646f;
 
 body {
 	background-color: $body;
@@ -24,8 +24,8 @@ div {
 	background-color: $grey-light;
 	color: $text;
 	border-radius: 4px;
-	box-shadow: 0px 2px 5px 0px #777f85;
-	border: 1px solid $lavand-light;
+	box-shadow: 0px 3px 7px 0px rgba(20, 25, 34, 0.8);
+	// border: 1px solid $lavand-light;
 
 	h2 {
 		background-color: $lavand;
@@ -64,6 +64,11 @@ div#query {
 		position: relative;
 		top: 20px;
 		right: 0;
+	}
+
+	input#title_input:focus {
+		outline: none;
+		border: 1px solid $body;
 	}
 
 	input[type="submit"] {

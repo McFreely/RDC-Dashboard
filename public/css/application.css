@@ -1,5 +1,5 @@
 body {
-  background-color: #8f99a1; }
+  background-color: #303a4a; }
 
 div {
   float: left;
@@ -9,10 +9,9 @@ div {
   background-color: #f0f0f0;
   color: #484f55;
   border-radius: 4px;
-  box-shadow: 0px 2px 5px 0px #777f85;
-  border: 1px solid #8e9ce1; }
+  box-shadow: 0px 3px 7px 0px rgba(20, 25, 34, 0.8); }
   div h2 {
-    background-color: #6578d6;
+    background-color: #8f96b9;
     color: #f0f0f0;
     padding: 10px;
     margin: 0;
@@ -23,7 +22,7 @@ a#welcome {
   float: left;
   text-decoration: none; }
   a#welcome div#welcome {
-    background-color: #6578d6; }
+    background-color: #8f96b9; }
     a#welcome div#welcome h1 {
       color: #f0f0f0;
       position: absolute;
@@ -43,6 +42,9 @@ div#query {
     position: relative;
     top: 20px;
     right: 0; }
+  div#query input#title_input:focus {
+    outline: none;
+    border: 1px solid #303a4a; }
   div#query input[type="submit"] {
     position: relative;
     top: 30px;
@@ -65,9 +67,9 @@ div#results {
 
 div#database input[type="submit"] {
   border: none;
-  background-color: #b66262;
+  background-color: #ad434d;
   color: #f0f0f0;
   padding: 7px;
   margin-left: 10px; }
 div#database input[type="submit"]:hover {
-  background-color: #cf5b5b; }
+  background-color: #d8646f; }
