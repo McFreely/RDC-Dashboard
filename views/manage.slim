@@ -13,7 +13,7 @@ div#results
 	h2 Search Results
 	ul
 	    -for movie in @movie
-	    	li = movie.mt + " \-\-\> " + movie.tweets.count.to_s
+	    	li id="status-analysis-#{movie.status_analysis}" = movie.mt + " \-\-\> " + movie.tweets.count.to_s
 
 Div#database
 	h2 Administration

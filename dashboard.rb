@@ -13,6 +13,7 @@ class Movie
 	include Mongoid::Document
 	field :mt, as: :movie_title, type: String
 	field :tweets, type: Hash
+	field :status_analysis, type: Boolean, default: false
 end
 
 class Twitter

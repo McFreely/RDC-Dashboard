@@ -64,6 +64,10 @@ div#results {
     padding: 0 0 10px 20px; }
     div#results ul li {
       padding: 5px 0; }
+    div#results ul #status-analysis-false {
+      color: #ae444d; }
+    div#results ul #status-analysis-true {
+      color: #64b77a; }
 
 div#database input[type="submit"] {
   border: none;

@@ -12,6 +12,8 @@ $lavand-dark: #4E63D0;
 $grey-light: #F0F0F0;
 $warning: #ad434d;
 $warning-light: #d8646f;
+$status-analysis-true: #64b77a;
+$status-analysis-false: #ae444d;
 
 body {
 	background-color: $body;
@@ -95,6 +97,12 @@ div#results {
 
 		li {
 			padding: 5px 0;
+		}
+		#status-analysis-false {
+			color: $status-analysis-false;
+		}
+		#status-analysis-true {
+			color: $status-analysis-true;
 		}
 	}
 }
