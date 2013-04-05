@@ -7,8 +7,6 @@ require 'mongoid'
 
 Mongoid.load!("mongoid.yml")
 
-# DB = Mongo::Connection.db('MovieList', :pool_size => 5, :timeout => 5)
-
 class Movie
   include Mongoid::Document
   field :mt, as: :movie_title, type: String
@@ -28,14 +26,14 @@ class Twitter
                 -'go'
                 -'vais voir'
                 -'va voir'
-                -'aller voir'
+
                 '-RT"
     # The options for the HTTParty query
     @options = {:query => {:q => query + filters,
-                           :rpp => 10,
+                           :rpp => 100,
                            :page => page,
                            :lang => :fr,
-                           :result_type => :recent}}
+                           :result_type => :mixed}}
 
     # The Twitter search API query with help from HTTParty
     self.class.get("/search.json", @options)['results']
