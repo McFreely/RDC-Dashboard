@@ -14,6 +14,14 @@ class Movie
   field :status_analysis, type: Boolean, default: false
 end
 
+class Stat
+  include Mongoid::Document
+  field :title, type: String 
+  field :total_count, type: Integer
+  field :stat_positive, type: Integer
+  field :stat_negative, type: Integer
+end
+
 class Twitter
   include HTTParty
   base_uri 'search.twitter.com'
@@ -30,10 +38,10 @@ class Twitter
                 '-RT"
     # The options for the HTTParty query
     @options = {:query => {:q => query + filters,
-                           :rpp => 100,
-                           :page => page,
-                           :lang => :fr,
-                           :result_type => :mixed}}
+        :rpp => 100,
+        :page => page,
+        :lang => :fr,
+        :result_type => :mixed}}
 
     # The Twitter search API query with help from HTTParty
     self.class.get("/search.json", @options)['results']
@@ -86,5 +94,15 @@ get '/delete/all' do
     redirect '/manage'
   else
     "Error delete all the movies"
+  end
+end
+
+get '/results/delete' do
+  # Destroy all the results of the analysis
+  results = Stat.all
+  if results.delete
+    redirect '/manage'
+  else
+    "Error deleting the results"
   end
 end
