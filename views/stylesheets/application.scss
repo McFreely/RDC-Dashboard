@@ -16,7 +16,9 @@ $status-analysis-true: #64b77a;
 $status-analysis-false: #ae444d;
 
 body {
-	background-color: $body;
+     background-color: $body;
+     width: 1250px;
+     margin: 10px auto;
 }
 
 div {
@@ -53,10 +55,7 @@ a#welcome {
 		background-color: $lavand;
 		h1 {
 			color: $grey-light;
-			position: absolute;
-			top: 140px;
-			left: 145px;
-			padding: 0;
+                        padding: 8px;
 			margin: 0;
 		}
 	}

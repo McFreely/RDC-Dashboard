@@ -1,8 +1,10 @@
 /* line 18, ../../views/stylesheets/application.scss */
 body {
-  background-color: #303a4a; }
+  background-color: #303a4a;
+  width: 1250px;
+  margin: 10px auto; }
 
-/* line 22, ../../views/stylesheets/application.scss */
+/* line 24, ../../views/stylesheets/application.scss */
 div {
   float: left;
   width: 400px;
@@ -12,10 +14,10 @@ div {
   color: #484f55;
   border-radius: 4px;
   box-shadow: 0px 3px 7px 0px rgba(20, 25, 34, 0.8); }
-  /* line 30, ../../views/stylesheets/application.scss */
+  /* line 32, ../../views/stylesheets/application.scss */
   div a {
     text-decoration: none; }
-  /* line 31, ../../views/stylesheets/application.scss */
+  /* line 33, ../../views/stylesheets/application.scss */
   div h2 {
     background-color: #8f96b9;
     color: #f0f0f0;
@@ -23,36 +25,33 @@ div {
     margin: 0;
     margin-bottom: 10px;
     border-radius: 4px 4px 0 0; }
-  /* line 39, ../../views/stylesheets/application.scss */
+  /* line 41, ../../views/stylesheets/application.scss */
   div p {
     padding: 7px; }
-  /* line 40, ../../views/stylesheets/application.scss */
+  /* line 42, ../../views/stylesheets/application.scss */
   div ul {
     padding: 7px;
     color: #484f55;
     list-style: none;
     margin: 0; }
 
-/* line 48, ../../views/stylesheets/application.scss */
+/* line 50, ../../views/stylesheets/application.scss */
 a#welcome {
   float: left;
   text-decoration: none; }
-  /* line 52, ../../views/stylesheets/application.scss */
+  /* line 54, ../../views/stylesheets/application.scss */
   a#welcome div#welcome {
     background-color: #8f96b9; }
-    /* line 54, ../../views/stylesheets/application.scss */
+    /* line 56, ../../views/stylesheets/application.scss */
     a#welcome div#welcome h1 {
       color: #f0f0f0;
-      position: absolute;
-      top: 140px;
-      left: 145px;
-      padding: 0;
+      padding: 8px;
       margin: 0; }
 
-/* line 64, ../../views/stylesheets/application.scss */
+/* line 63, ../../views/stylesheets/application.scss */
 div#query {
   text-align: center; }
-  /* line 67, ../../views/stylesheets/application.scss */
+  /* line 66, ../../views/stylesheets/application.scss */
   div#query input#title_input {
     width: 200px;
     height: 25px;
@@ -62,11 +61,11 @@ div#query {
     position: relative;
     top: 20px;
     right: 0; }
-  /* line 78, ../../views/stylesheets/application.scss */
+  /* line 77, ../../views/stylesheets/application.scss */
   div#query input#title_input:focus {
     outline: none;
     border: 1px solid #303a4a; }
-  /* line 83, ../../views/stylesheets/application.scss */
+  /* line 82, ../../views/stylesheets/application.scss */
   div#query input[type="submit"] {
     position: relative;
     top: 30px;
@@ -74,35 +73,35 @@ div#query {
     background-color: #8e9ce1;
     color: #f0f0f0;
     padding: 7px; }
-  /* line 92, ../../views/stylesheets/application.scss */
+  /* line 91, ../../views/stylesheets/application.scss */
   div#query input[type="submit"]:hover {
     background-color: #aeb8ea; }
 
-/* line 97, ../../views/stylesheets/application.scss */
+/* line 96, ../../views/stylesheets/application.scss */
 div#results {
   height: auto; }
-  /* line 100, ../../views/stylesheets/application.scss */
+  /* line 99, ../../views/stylesheets/application.scss */
   div#results ul li {
     padding: 5px 0; }
-  /* line 103, ../../views/stylesheets/application.scss */
+  /* line 102, ../../views/stylesheets/application.scss */
   div#results ul #status-analysis-false {
     color: #ae444d; }
-  /* line 106, ../../views/stylesheets/application.scss */
+  /* line 105, ../../views/stylesheets/application.scss */
   div#results ul #status-analysis-true {
     color: #64b77a; }
 
-/* line 113, ../../views/stylesheets/application.scss */
+/* line 112, ../../views/stylesheets/application.scss */
 div#database input[type="submit"] {
   border: none;
   background-color: #ad434d;
   color: #f0f0f0;
   padding: 7px;
   margin-left: 10px; }
-/* line 121, ../../views/stylesheets/application.scss */
+/* line 120, ../../views/stylesheets/application.scss */
 div#database input[type="submit"]:hover {
   background-color: #d8646f; }
 
-/* line 126, ../../views/stylesheets/application.scss */
+/* line 125, ../../views/stylesheets/application.scss */
 div#movie_tweets {
   width: 810px;
   height: auto; }
