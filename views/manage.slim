@@ -17,12 +17,15 @@ div#database
     input type='submit' value='DESTROY RESULTS'
 
 div#results
-  h2 Search Results
+  h2 Search Redux
   ul
     -for movie in @movie
-        li id="status-analysis-#{movie.status_analysis}" = movie.mt + " \-\-\> " + movie.tweets.count.to_s
-        li
-          a href="/manage/#{movie.mt}" id="load_tweets_#{movie.mt}" view tweets
+        li id="status-analysis-#{movie.status_analysis}" 
+          = movie.mt \
+          + " | " \
+          + "#" + movie.tweets.count.to_s \
+          + " | " 
+          a href="/manage/#{movie.mt}"  view tweets
 
 div#movie_tweets
   h2 Tweets Results

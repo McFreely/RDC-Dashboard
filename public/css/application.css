@@ -12,6 +12,9 @@ div {
   color: #484f55;
   border-radius: 4px;
   box-shadow: 0px 3px 7px 0px rgba(20, 25, 34, 0.8); }
+  /* line 30, ../../views/stylesheets/application.scss */
+  div a {
+    text-decoration: none; }
   /* line 31, ../../views/stylesheets/application.scss */
   div h2 {
     background-color: #8f96b9;
@@ -101,5 +104,5 @@ div#database input[type="submit"]:hover {
 
 /* line 126, ../../views/stylesheets/application.scss */
 div#movie_tweets {
-  width: auto;
+  width: 810px;
   height: auto; }
