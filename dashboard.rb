@@ -34,8 +34,7 @@ class Twitter
                 -'go'
                 -'vais voir'
                 -'va voir'
-
-                '-RT"
+                -RT"
     # The options for the HTTParty query
     @options = {:query => {:q => query + filters,
         :rpp => 100,
@@ -55,6 +54,14 @@ end
 get '/manage' do
   @movie = Movie.all   # List all the movies in the database
   slim :manage
+end
+
+get '/manage/:title' do
+  @image =  "#{params[:title]}"
+  @movie_tweets = Movie.where(mt: "#{params[:title]}")
+  slim :tweets
+
+
 end
 
 post '/query/new' do

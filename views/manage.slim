@@ -21,6 +21,8 @@ div#results
   ul
     -for movie in @movie
         li id="status-analysis-#{movie.status_analysis}" = movie.mt + " \-\-\> " + movie.tweets.count.to_s
+        li
+          a href="/manage/#{movie.mt}" view tweets
 
 div#tweets
   h2 Tweets Results
