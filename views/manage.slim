@@ -22,8 +22,8 @@ div#results
     -for movie in @movie
         li id="status-analysis-#{movie.status_analysis}" = movie.mt + " \-\-\> " + movie.tweets.count.to_s
         li
-          a href="/manage/#{movie.mt}" view tweets
+          a href="/manage/#{movie.mt}" id="load_tweets_#{movie.mt}" view tweets
 
-div#tweets
+div#movie_tweets
   h2 Tweets Results
-  p Here will be the specific tweets for a selected movie
+  == yield

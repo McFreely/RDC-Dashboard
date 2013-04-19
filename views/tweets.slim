@@ -1,8 +1,6 @@
-div#movie_tweets
-  h2 Tweets
-  h3 = @image
-  ul
-    - for movie in @movie_tweets
-        - for tweet in movie.tweets
-            li = tweet
+h3 = @image
+ul
+  - for farts in @movie_tweets
+      - for tweet in farts.tweets
+          li = "--> " + tweet
       

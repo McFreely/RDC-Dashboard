@@ -53,15 +53,18 @@ end
 
 get '/manage' do
   @movie = Movie.all   # List all the movies in the database
-  slim :manage
+  slim :manage do
+    slim :empty
+  end
 end
 
 get '/manage/:title' do
-  @image =  "#{params[:title]}"
+  @movie = Movie.all
+  @title =  "#{params[:title]}"
   @movie_tweets = Movie.where(mt: "#{params[:title]}")
-  slim :tweets
-
-
+  slim :manage do
+    slim :tweets
+  end
 end
 
 post '/query/new' do
