@@ -77,7 +77,7 @@ post '/query/new' do
   # The number or tweets for the query is determined by
   # (the number of pages) * (the number of result per page, up to 100)
   # Each iteration add the results of the new page to the hash to accumulate the tweets in the Hash
-  while @page <= 3
+  while @page <= 15
     response = twitter.search(@title, @page)
     response.each do |tweet|
       @tweet_list << tweet['text']
@@ -109,8 +109,10 @@ end
 
 get '/results/delete' do
   # Destroy all the results of the analysis
+  movie = Movie.all
   results = Stat.all
   if results.delete
+    movie.set(:status_analysis, false)
     redirect '/manage'
   else
     "Error deleting the results"
