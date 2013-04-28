@@ -16,10 +16,16 @@ end
 
 class Stat
   include Mongoid::Document
-  field :title, type: String 
+  field :title, type: String
   field :total_count, type: Integer
   field :stat_positive, type: Integer
   field :stat_negative, type: Integer
+  field :movie_poster, type: String
+  field :trailer, type: String
+  field :release_date, type: String, default: '2013'
+  field :director, type: String
+  field :runtime, type: String
+  field :plot, type: String
 end
 
 class Twitter
@@ -95,6 +101,40 @@ post '/query/new' do
   end
 
   slim :manage
+end
+
+get '/manage/edit/:title' do
+  @movie = Movie.all
+  @title = "#{params[:title]}"
+  @movie_infos = Stat.where(title: "#{params[:title]}")
+  slim :manage do
+    slim :edit
+  end
+end
+
+put '/manage/edit/:title' do
+  # movie = Stat.where(title: "#{params[:title]}")
+  @title = "#{params[:title]}"
+  poster = "#{params[:edit][:poster]}"
+  trailer = "#{params[:edit][:trailer]}"
+  release = "#{params[:edit][:release]}"
+  director = "#{params[:edit][:director]}"
+  runtime = "#{params[:edit][:runtime]}"
+  plot = "#{params[:edit][:plot]}"
+
+  stat = Stat.where(title: "#{params[:title]}").update(movie_poster: poster,
+               trailer: trailer,
+               release_date: release,
+               director: director,
+               runtime: runtime,
+               plot: plot)
+
+
+  redirect to("/manage/edit/#{@title}")
+
+  slim :manage do
+    slim :edit
+  end
 end
 
 get '/delete/all' do

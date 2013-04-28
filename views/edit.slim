@@ -1,0 +1,33 @@
+/ #infos
+h3 = @title
+- for movie in @movie_infos
+
+  h5 Poster
+  p = movie.movie_poster
+
+  h5 Trailer link
+  p = movie.trailer
+
+  h5 Release Date
+  p = movie.release_date
+
+  h5 Director
+  p = movie.director
+
+  h5 Runtime
+  p = movie.runtime
+
+  h5 Plot
+  p = movie.plot
+
+
+h3 Update
+form action="/manage/edit/#{@title}" method="POST"
+	input type="hidden" name="_method" value="put"
+	input type="text" name='edit[poster]' placeholder="poster"
+	input type='text' name='edit[trailer]' placeholder="trailer"
+	input type='text' name='edit[release]' placeholder='release'
+	input type='text' name='edit[director]' placeholder='director'
+	input type='text' name='edit[runtime]' placeholder='runtime'
+	input type='text' name="edit[plot]" placeholder='plot'
+	input type='submit' value="Submit"
