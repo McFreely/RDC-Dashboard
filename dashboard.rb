@@ -146,17 +146,6 @@ get '/delete/:title' do
   end
 end
 
-get '/delete/all' do
-  # Destroy all the Movie documents in the collection
-  # REfactor with the delete_all method
-  collection = Movie.all
-  if collection.delete
-    redirect '/manage'
-  else
-    "Error delete all the movies"
-  end
-end
-
 get '/results/delete' do
   # Destroy all the results of the analysis
   movie = Movie.all

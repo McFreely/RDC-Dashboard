@@ -1,8 +1,10 @@
 /* line 18, application.scss */
 body {
-  background-color: #303a4a; }
+  background-color: #303a4a;
+  width: 1250px;
+  margin: 10px auto; }
 
-/* line 22, application.scss */
+/* line 24, application.scss */
 div {
   float: left;
   width: 400px;
@@ -12,7 +14,10 @@ div {
   color: #484f55;
   border-radius: 4px;
   box-shadow: 0px 3px 7px 0px rgba(20, 25, 34, 0.8); }
-  /* line 31, application.scss */
+  /* line 32, application.scss */
+  div a {
+    text-decoration: none; }
+  /* line 33, application.scss */
   div h2 {
     background-color: #8f96b9;
     color: #f0f0f0;
@@ -20,27 +25,33 @@ div {
     margin: 0;
     margin-bottom: 10px;
     border-radius: 4px 4px 0 0; }
+  /* line 41, application.scss */
+  div p {
+    padding: 7px; }
+  /* line 42, application.scss */
+  div ul {
+    padding: 7px;
+    color: #484f55;
+    list-style: none;
+    margin: 0; }
 
-/* line 40, application.scss */
+/* line 50, application.scss */
 a#welcome {
   float: left;
   text-decoration: none; }
-  /* line 44, application.scss */
+  /* line 54, application.scss */
   a#welcome div#welcome {
     background-color: #8f96b9; }
-    /* line 46, application.scss */
+    /* line 56, application.scss */
     a#welcome div#welcome h1 {
       color: #f0f0f0;
-      position: absolute;
-      top: 140px;
-      left: 145px;
-      padding: 0;
+      padding: 8px;
       margin: 0; }
 
-/* line 56, application.scss */
+/* line 63, application.scss */
 div#query {
   text-align: center; }
-  /* line 59, application.scss */
+  /* line 66, application.scss */
   div#query input#title_input {
     width: 200px;
     height: 25px;
@@ -50,11 +61,11 @@ div#query {
     position: relative;
     top: 20px;
     right: 0; }
-  /* line 70, application.scss */
+  /* line 77, application.scss */
   div#query input#title_input:focus {
     outline: none;
     border: 1px solid #303a4a; }
-  /* line 75, application.scss */
+  /* line 82, application.scss */
   div#query input[type="submit"] {
     position: relative;
     top: 30px;
@@ -62,41 +73,38 @@ div#query {
     background-color: #8e9ce1;
     color: #f0f0f0;
     padding: 7px; }
-  /* line 84, application.scss */
+  /* line 91, application.scss */
   div#query input[type="submit"]:hover {
     background-color: #aeb8ea; }
 
-/* line 89, application.scss */
+/* line 96, application.scss */
 div#results {
   height: auto; }
-  /* line 91, application.scss */
-  div#results ul {
-    color: #484f55;
-    list-style: none;
-    margin: 0;
-    padding: 0 0 10px 20px; }
-    /* line 97, application.scss */
-    div#results ul li {
-      padding: 5px 0; }
-    /* line 100, application.scss */
-    div#results ul #status-analysis-false {
-      color: #ae444d; }
-    /* line 103, application.scss */
-    div#results ul #status-analysis-true {
-      color: #64b77a; }
+  /* line 99, application.scss */
+  div#results ul li {
+    padding: 5px 0; }
+    /* line 101, application.scss */
+    div#results ul li a {
+      background-color: red; }
+  /* line 105, application.scss */
+  div#results ul #status-analysis-false {
+    color: #ae444d; }
+  /* line 108, application.scss */
+  div#results ul #status-analysis-true {
+    color: #64b77a; }
 
-/* line 110, application.scss */
+/* line 115, application.scss */
 div#database input[type="submit"] {
   border: none;
   background-color: #ad434d;
   color: #f0f0f0;
   padding: 7px;
   margin-left: 10px; }
-/* line 118, application.scss */
+/* line 123, application.scss */
 div#database input[type="submit"]:hover {
   background-color: #d8646f; }
 
-/* line 123, application.scss */
-div#choucroute {
-  width: auto;
+/* line 128, application.scss */
+div#movie_tweets {
+  width: 810px;
   height: auto; }

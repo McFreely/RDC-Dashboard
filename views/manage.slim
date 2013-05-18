@@ -11,8 +11,6 @@ div#query
 
 div#database
   h2 Administration
-  form action='/delete/all' method='DELETE'
-    input type='submit' value='Clear Tweets'
   form action='/results/delete' method='DELETE'
     input type='submit' value='DESTROY ANALYSIS RESULTS'
 
@@ -22,11 +20,13 @@ div#results
     -for movie in @movie
         li id="status-analysis-#{movie.status_analysis}" 
           = movie.mt \
-          + " | " \
-          + "#" + movie.tweets.count.to_s \
-          + " | "
-          a href="/manage/#{movie.mt}"  view tweets   |   
-          a href="/delete/#{movie.mt}"  delete movie
+          + " -- " \
+          + "#" + movie.tweets.count.to_s
+        li
+          a href="/manage/#{movie.mt}"  Tweets
+          a href="/manage/edit/#{movie.mt}" Infos
+          a href="/delete/#{movie.mt}"  Delete
+        li
 
 div#movie_tweets
   h2 Tweets Results

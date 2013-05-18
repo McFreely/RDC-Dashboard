@@ -98,6 +98,11 @@ div#results {
 	ul {
 		li {
 			padding: 5px 0;
+			a {
+				color: $grey-light;
+				background-color: $lavand;
+				margin-left: 10px; padding: 4px 8px;
+			}
 		}
 		#status-analysis-false {
 			color: $status-analysis-false;

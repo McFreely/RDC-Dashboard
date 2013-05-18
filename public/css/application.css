@@ -83,25 +83,31 @@ div#results {
   /* line 99, ../../views/stylesheets/application.scss */
   div#results ul li {
     padding: 5px 0; }
-  /* line 102, ../../views/stylesheets/application.scss */
+    /* line 101, ../../views/stylesheets/application.scss */
+    div#results ul li a {
+      color: #f0f0f0;
+      background-color: #8f96b9;
+      margin-left: 10px;
+      padding: 4px 8px; }
+  /* line 107, ../../views/stylesheets/application.scss */
   div#results ul #status-analysis-false {
     color: #ae444d; }
-  /* line 105, ../../views/stylesheets/application.scss */
+  /* line 110, ../../views/stylesheets/application.scss */
   div#results ul #status-analysis-true {
     color: #64b77a; }
 
-/* line 112, ../../views/stylesheets/application.scss */
+/* line 117, ../../views/stylesheets/application.scss */
 div#database input[type="submit"] {
   border: none;
   background-color: #ad434d;
   color: #f0f0f0;
   padding: 7px;
   margin-left: 10px; }
-/* line 120, ../../views/stylesheets/application.scss */
+/* line 125, ../../views/stylesheets/application.scss */
 div#database input[type="submit"]:hover {
   background-color: #d8646f; }
 
-/* line 125, ../../views/stylesheets/application.scss */
+/* line 130, ../../views/stylesheets/application.scss */
 div#movie_tweets {
   width: 810px;
   height: auto; }
