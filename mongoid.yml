@@ -4,3 +4,8 @@ development:
       database: MovieList
       hosts:
         - localhost
+
+production:
+  sessions:
+    default:
+      uri: <%= ENV['MONGOHQ_URL'] %>
