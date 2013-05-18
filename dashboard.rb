@@ -1,4 +1,3 @@
-require 'rubygems'
 require 'sinatra'
 require 'slim'
 require 'multi_json'

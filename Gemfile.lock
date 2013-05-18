@@ -1,2 +1,8 @@
-source 'https://rubygems.org'
-gem 'sinatra'
+GEM
+  remote: https://rubygems.org/
+  specs:
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
