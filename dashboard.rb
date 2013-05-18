@@ -136,8 +136,19 @@ put '/manage/edit/:title' do
   end
 end
 
+get '/delete/:title' do
+  # Destroy the movie and the associated tweets
+  movie = Movie.where(mt: "#{params[:title]}")
+  if movie.delete
+    redirect '/manage'
+  else
+    "Error while deleting document"
+  end
+end
+
 get '/delete/all' do
   # Destroy all the Movie documents in the collection
+  # REfactor with the delete_all method
   collection = Movie.all
   if collection.delete
     redirect '/manage'

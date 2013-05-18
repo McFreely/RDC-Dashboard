@@ -24,8 +24,9 @@ div#results
           = movie.mt \
           + " | " \
           + "#" + movie.tweets.count.to_s \
-          + " | " 
-          a href="/manage/#{movie.mt}"  view tweets
+          + " | "
+          a href="/manage/#{movie.mt}"  view tweets   |   
+          a href="/delete/#{movie.mt}"  delete movie
 
 div#movie_tweets
   h2 Tweets Results
