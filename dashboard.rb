@@ -103,6 +103,7 @@ post '/query/new' do
 end
 
 get '/manage/edit/:title' do
+  # Show the infos for the movie selected
   @movie = Movie.all
   @title = "#{params[:title]}"
   @movie_infos = Stat.where(title: "#{params[:title]}")
@@ -112,24 +113,14 @@ get '/manage/edit/:title' do
 end
 
 put '/manage/edit/:title' do
-  # movie = Stat.where(title: "#{params[:title]}")
-  @title = "#{params[:title]}"
-  poster = "#{params[:edit][:poster]}"
-  trailer = "#{params[:edit][:trailer]}"
-  release = "#{params[:edit][:release]}"
-  director = "#{params[:edit][:director]}"
-  runtime = "#{params[:edit][:runtime]}"
-  plot = "#{params[:edit][:plot]}"
+  title = "#{params[:title]}"
 
-  stat = Stat.where(title: "#{params[:title]}").update(movie_poster: poster,
-               trailer: trailer,
-               release_date: release,
-               director: director,
-               runtime: runtime,
-               plot: plot)
+  #create a hash with only the values to update
+  edit = params[:edit].delete_if {|key, value| value.empty?}
 
+  stat = Stat.where(title: title).update(edit)
 
-  redirect to("/manage/edit/#{@title}")
+  redirect to("/manage/edit/#{title}")
 
   slim :manage do
     slim :edit
